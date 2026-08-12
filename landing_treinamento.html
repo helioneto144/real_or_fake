@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Conscientização de Segurança — FASS</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #f2f4f7; color: #1b2733; line-height: 1.55;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 24px 16px 64px; }
+  .card {
+    background: #fff; border-radius: 14px; box-shadow: 0 6px 28px rgba(16,42,67,.10);
+    overflow: hidden; border: 1px solid #e3e8ee;
+  }
+  .top { background: linear-gradient(135deg,#b3261e,#e04b3f); color: #fff; padding: 34px 28px; text-align: center; }
+  .top .hook { font-size: 46px; line-height: 1; }
+  .top h1 { margin: 14px 0 4px; font-size: 25px; font-weight: 700; }
+  .top p { margin: 0; opacity: .95; font-size: 15px; }
+  .body { padding: 26px 28px; }
+  .body h2 { font-size: 18px; margin: 26px 0 10px; color: #b3261e; }
+  .lead { font-size: 16px; }
+  ul.signs { padding-left: 0; list-style: none; margin: 8px 0; }
+  ul.signs li { padding: 10px 12px 10px 40px; position: relative; background: #fbecea; border-radius: 8px; margin-bottom: 8px; font-size: 14.5px; }
+  ul.signs li::before { content: "⚠"; position: absolute; left: 14px; top: 9px; }
+  .warn {
+    margin: 24px 0 6px; padding: 16px 18px; border-left: 5px solid #d99400;
+    background: #fff6e2; border-radius: 8px; font-size: 15px;
+  }
+  .warn b { color: #8a5d00; }
+  .checklist { background: #eef7f0; border-radius: 8px; padding: 16px 18px 16px 20px; }
+  .checklist li { margin-bottom: 6px; font-size: 14.5px; }
+  .foot { text-align: center; padding: 22px; color: #6b7785; font-size: 12.5px; }
+  .btn { display: inline-block; margin-top: 8px; background: #0b5cad; color: #fff !important;
+    text-decoration: none; padding: 11px 22px; border-radius: 8px; font-weight: 600; font-size: 14.5px; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #10151b; color: #e5eaf0; }
+    .card { background: #182029; border-color: #263241; }
+    .body h2 { color: #ff8b80; }
+    ul.signs li { background: #3a1f1c; }
+    .warn { background: #2e2413; }
+    .warn b { color: #f0c25a; }
+    .checklist { background: #16261c; }
+    .foot { color: #8a97a5; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="top">
+        <div class="hook">🎣</div>
+        <h1>Isto era uma simulação de phishing</h1>
+        <p>Nenhum dado seu foi coletado. Respire — e leia com atenção.</p>
+      </div>
+      <div class="body">
+        <p class="lead">
+          Você acabou de clicar em um link dentro de um <b>e-mail de teste</b> enviado pela
+          própria FASS como parte de uma <b>campanha interna de conscientização em segurança</b>.
+          Se este fosse um ataque real, um criminoso poderia ter roubado sua senha, acessado
+          processos sigilosos ou desviado pagamentos.
+        </p>
+
+        <div class="warn">
+          🤫 <b>Importante:</b> por favor, <b>não comente com colegas</b> que você recebeu
+          este e-mail. A campanha ainda está em andamento e o elemento surpresa faz parte do
+          treinamento — avisar os outros compromete o resultado para todo o time.
+        </div>
+
+        <h2>Os sinais que passaram despercebidos</h2>
+        <!-- Bloco dinâmico por token/template. Placeholders substituídos pela ferramenta de disparo. -->
+        <ul class="signs" id="sinais">
+          <li>O <b>domínio do remetente</b> não era o oficial do órgão/empresa (ex.: terminava em
+            <code>.online</code> em vez de <code>.jus.br</code>, ou o endereço real divergia do nome exibido).</li>
+          <li>Havia <b>urgência artificial</b> ("altere agora", "vence hoje") para te fazer agir sem pensar.</li>
+          <li>O botão/link apontava para um endereço <b>fora</b> do sistema oficial (passe o mouse antes de clicar).</li>
+        </ul>
+
+        <h2>Como se proteger da próxima vez</h2>
+        <div class="checklist">
+          <ul>
+            <li>✅ Passe o mouse sobre links <b>antes</b> de clicar e confira o domínio real.</li>
+            <li>✅ Desconfie de urgência, cobrança e "alerta de acesso" que peçam senha.</li>
+            <li>✅ Mudança de dados bancários de fornecedor? Confirme por telefone conhecido.</li>
+            <li>✅ Na dúvida, <b>não clique</b> — reporte pelo canal de segurança da FASS.</li>
+          </ul>
+        </div>
+
+        <p style="margin-top:22px;">
+          <a class="btn" href="#" onclick="return false;">Reportar um phishing suspeito</a>
+        </p>
+        <p style="font-size:13px;color:#6b7785;">
+          Dúvidas sobre a campanha? Fale com a equipe de Segurança da Informação da FASS.
+        </p>
+      </div>
+      <div class="foot">
+        FASS — Campanha de Conscientização em Segurança da Informação · Uso interno
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Registro do clique: o token na URL (?t=) identifica público/template/pessoa.
+    // NÃO há qualquer coleta de credencial — apenas o registro do acesso à landing.
+    (function () {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var token = params.get('t') || 'sem-token';
+        // A ferramenta de disparo (ex.: GoPhish) já contabiliza o clique pelo próprio link.
+        // Este beacon é redundância opcional — trocar a URL abaixo pela do coletor da campanha.
+        // navigator.sendBeacon('https://<coletor-da-campanha>/click', token);
+        console.log('[campanha] clique registrado, token=', token);
+      } catch (e) { /* silencioso */ }
+    })();
+  </script>
+</body>
+</html>

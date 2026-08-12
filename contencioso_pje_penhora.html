@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+  ISCA — CONTENCIOSO  (v4 — clone CRU do PJe Push real, sem "design")
+  De (exibido): TJRJ - Processo Judicial Eletrônico <push@tjrj.online>
+  Assunto:      [Push] Movimentação processual do processo 0809988-45.2026.8.19.0001
+  Base real:    formato PJe Push capturado (TJES/TJPI) — texto plano + tabela border=1
+  Gatilho:      GUSTAVO FONSECA no Polo Passivo de execução + penhora/SISBAJUD
+  Tell:         domínio tjrj.online (real: tjrj.jus.br)
+  Landing:      https://<landing-da-campanha>/t/{{TOKEN}}
+-->
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <title>PJe Push</title>
+    <meta name="description" content="PJe Push - Serviço de Acompanhamento automático de processos" />
+    <meta name="author" content="CNJ" />
+  </head>
+  <body>
+    Tribunal de Justiça do Estado do Rio de Janeiro
+    <br />
+    <br />PJe Push - Serviço de Acompanhamento automático de processos
+    <br />
+    <br />Prezado(a),
+    <br />
+    <br />Informamos que o processo a seguir sofreu movimentação:
+    <br />Número do Processo: 0809988-45.2026.8.19.0001
+    <br />Polo Ativo: BANCO BRADESCO S.A.
+    <br />Polo Passivo: GUSTAVO FONSECA
+    <br />Classe Judicial: EXECUÇÃO DE TÍTULO EXTRAJUDICIAL
+    <br />Órgão: COMARCA DA CAPITAL - 7ª VARA CÍVEL
+    <br />Data de Autuação: 03/02/2026 14:11
+    <br />Assunto: Contratos Bancários
+    <br />
+    <br />
+    <table border="1">
+      <tr>
+        <th>Data - Movimento</th>
+      </tr>
+      <tr>
+        <td>16/07/2026 09:52 - Deferida penhora online via SISBAJUD. Determinado o bloqueio de valores nas contas do executado at&eacute; o limite de R$ 287.430,19.</td>
+      </tr>
+      <tr>
+        <td>16/07/2026 09:52 - Intimada a parte executada para, querendo, apresentar impugna&ccedil;&atilde;o no prazo legal, sob pena de convers&atilde;o do bloqueio em penhora.</td>
+      </tr>
+    </table>
+    <br />
+    <br />Para consultar a &iacute;ntegra da movimenta&ccedil;&atilde;o, acesse o processo no PJe:
+    <a href="https://pje.tjrj.online/pje/ConsultaProcesso/listView.seam?t={{TOKEN}}">https://pje.tjrj.online/pje/ConsultaProcesso</a>
+    <br />
+    <br />Caso não tenha mais interesse em receber o push, acessar o link:
+    <a href="https://pje.tjrj.online/pje/Push/loginPush.seam?t={{TOKEN}}">https://pje.tjrj.online/pje/Push/loginPush.seam</a>
+  </body>
+</html>
