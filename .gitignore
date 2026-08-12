@@ -18,3 +18,10 @@ Thumbs.db
 *.tmp
 *.bak
 *.swp
+# Dados da campanha (PII - NAO versionar)
+usuarios.csv
+destinatarios*.csv
+recipients_*.csv
+seed_todos.sql
+# Artefato gerado do tracker (rode `node tracker/build.mjs`)
+tracker/src/landing.js

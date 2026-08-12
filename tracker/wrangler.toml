@@ -1,0 +1,17 @@
+name = "rf-tracker"
+main = "src/worker.js"
+compatibility_date = "2025-08-01"
+workers_dev = false
+
+# D1: banco de cliques + destinatarios.
+# Rode `wrangler d1 create rf_tracker` e cole o id abaixo.
+[[d1_databases]]
+binding = "DB"
+database_name = "rf_tracker"
+database_id = "<COLE_AQUI_O_ID_DO_SEU_D1>"
+
+# Custom Domain do SEU ambiente de teste.
+# Use sempre um dominio proprio de laboratorio — nunca o dominio real de terceiros.
+[[routes]]
+pattern = "pje.SEU-DOMINIO.exemplo"
+custom_domain = true
